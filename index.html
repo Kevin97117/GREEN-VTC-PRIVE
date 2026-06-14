@@ -299,29 +299,67 @@
 
         <!-- POURQUOI NOUS -->
         <section class="section section-dark" id="pourquoi">
-            <h2 class="section-title">Pourquoi nous choisir ?</h2>
-            <div class="features">
-                <div class="feature">
-                    <span class="feature-icon">⏱</span>
-                    <h3>Ponctualité garantie</h3>
-                    <p>Nous suivons votre vol en temps réel et adaptons l'heure de prise en charge.</p>
+          <style>
+            .pq-wrapper { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+            .pq-left { }
+            .pq-label { font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--green); margin-bottom: 16px; }
+            .pq-title { font-family: 'Syne', sans-serif; font-size: clamp(26px, 4vw, 42px); font-weight: 800; line-height: 1.1; letter-spacing: -.02em; margin-bottom: 20px; }
+            .pq-title span { color: var(--green); }
+            .pq-desc { font-size: 14px; color: var(--text-muted); line-height: 1.8; margin-bottom: 40px; max-width: 420px; }
+            .pq-stats { display: flex; gap: 40px; }
+            .pq-stat-num { font-family: 'Syne', sans-serif; font-size: 36px; font-weight: 800; color: var(--green); line-height: 1; }
+            .pq-stat-label { font-size: 12px; color: var(--text-muted); margin-top: 4px; letter-spacing: .04em; }
+            .pq-right { display: flex; flex-direction: column; gap: 0; }
+            .pq-item { display: flex; gap: 20px; align-items: flex-start; padding: 24px 0; border-bottom: 1px solid var(--border); }
+            .pq-item:first-child { border-top: 1px solid var(--border); }
+            .pq-icon { width: 40px; height: 40px; border-radius: 10px; background: rgba(29,185,84,.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+            .pq-icon svg { width: 20px; height: 20px; stroke: var(--green); }
+            .pq-item-title { font-size: 15px; font-weight: 600; margin-bottom: 4px; color: var(--text); }
+            .pq-item-desc { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+            @media (max-width: 768px) {
+                .pq-wrapper { grid-template-columns: 1fr; gap: 40px; }
+                .pq-stats { gap: 24px; }
+            }
+          </style>
+          <div class="pq-wrapper">
+            <div class="pq-left">
+              <p class="pq-label">Notre engagement</p>
+              <h2 class="pq-title">Un service <span>d'exception</span><br>à chaque trajet</h2>
+              <p class="pq-desc">Green VTC Privé, c'est l'alliance du confort haut de gamme, de la ponctualité et d'un service personnalisé. Chaque course est pensée pour vous offrir une expérience irréprochable.</p>
+              <div class="pq-stats">
+                <div>
+                  <div class="pq-stat-num">24/7</div>
+                  <div class="pq-stat-label">Disponibilité</div>
                 </div>
-                <div class="feature">
-                    <span class="feature-icon">🚗</span>
-                    <h3>Véhicules haut de gamme</h3>
-                    <p>Flotte premium entretenue, climatisée et équipée pour votre confort.</p>
+                <div>
+                  <div class="pq-stat-num">100%</div>
+                  <div class="pq-stat-label">Électrique</div>
                 </div>
-                <div class="feature">
-                    <span class="feature-icon">👔</span>
-                    <h3>Chauffeurs professionnels</h3>
-                    <p>Expérimentés, discrets et courtois votre satisfaction est notre priorité.</p>
+                <div>
+                  <div class="pq-stat-num">0 €</div>
+                  <div class="pq-stat-label">Surprise tarifaire</div>
                 </div>
-                <div class="feature">
-                    <span class="feature-icon">💶</span>
-                    <h3>Tarifs transparents</h3>
-                    <p>Prix fixés à l'avance, sans surprise ni surcoût.</p>
-                </div>
+              </div>
             </div>
+            <div class="pq-right">
+              <div class="pq-item">
+                <div class="pq-icon"><svg fill="none" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+                <div><div class="pq-item-title">Ponctualité garantie</div><div class="pq-item-desc">Suivi de vol en temps réel, adaptation immédiate en cas de retard. Nous sommes là avant vous.</div></div>
+              </div>
+              <div class="pq-item">
+                <div class="pq-icon"><svg fill="none" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 2l7 4v6c0 5-3.5 9-7 10C8.5 21 5 17 5 12V6l7-4z"/><polyline points="9,12 11,14 15,10"/></svg></div>
+                <div><div class="pq-item-title">Chauffeur professionnel</div><div class="pq-item-desc">Discret, courtois, en tenue soignée. Votre confort et votre sécurité sont notre priorité absolue.</div></div>
+              </div>
+              <div class="pq-item">
+                <div class="pq-icon"><svg fill="none" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div>
+                <div><div class="pq-item-title">Tarif fixe confirmé</div><div class="pq-item-desc">Prix communiqué avant le départ, sans compteur, sans mauvaise surprise à l'arrivée.</div></div>
+              </div>
+              <div class="pq-item">
+                <div class="pq-icon"><svg fill="none" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 2C9 2 5 5 5 10c0 4 4 8 7 10 3-2 7-6 7-10 0-5-4-8-7-8z"/><path d="M9 12c1 1 2 2 3 2s3-2 3-2"/></svg></div>
+                <div><div class="pq-item-title">100% électrique Crit'Air 0</div><div class="pq-item-desc">Tesla Model Y, accès à toutes les zones, zéro émission. Un choix responsable et premium.</div></div>
+              </div>
+            </div>
+          </div>
         </section>
 
         <!-- BOUTON RETOUR EN HAUT -->
