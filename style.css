@@ -957,12 +957,14 @@ body {
     /* Header */
     .header {
         padding: 12px 16px;
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
         gap: 12px;
     }
     .header.scrolled { padding: 10px 16px; }
+    .logo-wrapper { align-items: center; }
     .logo { width: 80px; }
-    .site-name { font-size: 12px; }
+    .site-name { font-size: 12px; text-align: center; }
     .list-link { column-gap: 14px; flex-wrap: wrap; justify-content: center; }
     .nav-link a { font-size: 11px; letter-spacing: .5px; }
 
