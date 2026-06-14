@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GREEN VTC PRIVE</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    </head>
+    <body>
+
+        <!-- HEADER -->
+        <!-- TOAST NOTIFICATION -->
+        <div class="toast" id="toast">
+            <span class="toast-icon">✅</span>
+            <div>
+                <p class="toast-title">Demande envoyée !</p>
+                <p class="toast-msg">Nous vous contacterons rapidement.</p>
+            </div>
+        </div>
+
+        <!-- BARRE DE PROGRESSION -->
+        <div class="progress-bar" id="progressBar"></div>
+
+        <header class="header">
+            <a href="#" class="logo-wrapper">
+                <img class="logo" src="img/pngtree-3d-tesla-car-isolated-on-transparent-background-png-image_13238404.png" alt="Logo Green VTC">
+                <span class="site-name">GREEN VTC PRIVE</span>
+            </a>
+            <nav>
+                <ul class="list-link">
+                    <li class="nav-link"><a href="#services">Services</a></li>
+                    <li class="nav-link"><a href="#flotte">Flotte</a></li>
+                    <li class="nav-link"><a href="#tarifs-detail">Tarifs</a></li>
+                    <li class="nav-link"><a href="#contact">Contact</a></li>
+                    <li class="nav-link"><a href="#contact">Réserver</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <p class="hero-tag">Chauffeur privé haut de gamme</p>
+                <h1 class="hero-title">Voyagez avec <span>élégance</span></h1>
+                <p class="hero-subtitle">Confort, ponctualité et discrétion à chaque trajet.</p>
+                <a href="#contact" class="btn-primary">Réserver maintenant</a>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section class="section" id="services">
+            <h2 class="section-title">Nos Services</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="service-header">
+                        <span class="service-num">01</span>
+                        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.5H2M5 16.5l1.5-5h11l1.5 5M12 4l4 7.5H8L12 4zM9 20.5h6"/></svg>
+                    </div>
+                    <h3 class="service-title">Transfert aéroport</h3>
+                    <p class="service-desc">Prise en charge à domicile et dépose directement au terminal, sans stress.</p>
+                    <div class="service-tag"></div>
+                </div>
+                <div class="service-item">
+                    <div class="service-header">
+                        <span class="service-num">02</span>
+                        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+                    </div>
+                    <h3 class="service-title">Mise à disposition</h3>
+                    <p class="service-desc">Votre chauffeur dédié, disponible à l'heure ou à la journée selon vos besoins.</p>
+                    <div class="service-tag"></div>
+                </div>
+                <div class="service-item">
+                    <div class="service-header">
+                        <span class="service-num">03</span>
+                        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12h18M3 12l4-4M3 12l4 4M21 12l-4-4M21 12l-4 4"/></svg>
+                    </div>
+                    <h3 class="service-title">Longue distance</h3>
+                    <p class="service-desc">Trajets entre villes ou régions dans un confort absolu, tarif sur devis.</p>
+                    <div class="service-tag"></div>
+                </div>
+                <div class="service-item">
+                    <div class="service-header">
+                        <span class="service-num">04</span>
+                        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+                    </div>
+                    <h3 class="service-title">Événements privés</h3>
+                    <p class="service-desc">Mariages, soirées, séminaires, nous assurons votre transport d'exception.</p>
+                    <div class="service-tag"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FLOTTE -->
+        <section class="section" id="flotte">
+            <h2 class="section-title">Notre Flotte</h2>
+            <div class="flotte-wrapper">
+                <img class="flotte-img" src="img/Tesla.png" alt>
+                <div class="flotte-info">
+                    <h3>Tesla Model Y</h3>
+
+                    <ul class="flotte-specs">
+                        <li>✅ 4 passagers</li>
+                        <li>✅ Climatisation automatique</li>
+                        <li>✅ WiFi à bord</li>
+                        <li>✅ Chargeur USB</li>
+                        <li>✅ 100% électrique</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- TARIFS DÉTAILLÉS -->
+        <section class="section" id="tarifs-detail">
+            <style>
+            .td-badges{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:24px}
+            .td-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border:1px solid #252525;border-radius:100px;font-size:12px;color:#888;letter-spacing:.04em}
+            .td-badge-dot{width:6px;height:6px;border-radius:50%;background:#1DB954}
+            .td-sub{color:#888;font-size:13px;text-align:center;letter-spacing:.06em;text-transform:uppercase;margin-bottom:28px}
+            .td-section-label{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+            .td-section-label span{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#1DB954}
+            .td-section-label::after{content:'';flex:1;height:1px;background:#252525}
+            .td-section-desc{color:#888;font-size:13px;margin-bottom:22px;max-width:520px}
+            .td-table{width:100%;border-collapse:collapse;border:1px solid #252525;border-radius:12px;overflow:hidden;margin-bottom:14px}
+            .td-table thead tr{background:#181818;border-bottom:1px solid #252525}
+            .td-table th{padding:12px 20px;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#888;text-align:left}
+            .td-table td{padding:16px 20px;border-bottom:1px solid #252525;font-size:14px}
+            .td-table tbody tr:last-child td{border-bottom:none}
+            .td-table tbody tr:hover{background:rgba(255,255,255,.025)}
+            .td-dest{font-weight:500}
+            .td-subdest{font-size:12px;color:#888;margin-top:2px}
+            .td-price-cell{font-family:'Syne',sans-serif;font-size:18px;font-weight:700;color:#1DB954;white-space:nowrap}
+            .td-tag{display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:500;background:rgba(29,185,84,.12);color:#1DB954;letter-spacing:.04em}
+            .td-card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-bottom:14px}
+            .td-card{background:#181818;border:1px solid #252525;border-radius:12px;padding:20px 18px;transition:border-color .2s}
+            .td-card:hover{border-color:#16943F}
+            .td-card-name{font-weight:500;font-size:14px;margin-bottom:4px}
+            .td-card-sub{font-size:12px;color:#888;margin-bottom:14px}
+            .td-card-price{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:#1DB954}
+            .td-dispo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;margin-bottom:14px}
+            .td-dispo-card{background:#181818;border:1px solid #252525;border-radius:12px;padding:22px 18px;position:relative;transition:border-color .2s}
+            .td-dispo-card:hover{border-color:#16943F}
+            .td-dispo-card.popular{border-color:#16943F}
+            .td-popular-badge{position:absolute;top:-1px;right:14px;background:#1DB954;color:#0A0A0A;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:0 0 6px 6px}
+            .td-dispo-duration{font-size:12px;color:#888;font-weight:500;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
+            .td-dispo-price{font-family:'Syne',sans-serif;font-size:26px;font-weight:800;color:#1DB954;margin-bottom:6px}
+            .td-dispo-desc{font-size:12px;color:#888}
+            .td-footnote{display:flex;align-items:flex-start;gap:10px;padding:14px 16px;background:#181818;border:1px solid #252525;border-radius:8px;font-size:12px;color:#888;margin-bottom:48px}
+            .td-footnote-icon{color:#1DB954;flex-shrink:0}
+            .td-block{margin-bottom:48px}
+            @media(max-width:560px){.td-table th:nth-child(3),.td-table td:nth-child(3){display:none}.td-dispo-grid{grid-template-columns:1fr 1fr}}
+            </style>
+
+            <h2 class="section-title">Tarifs</h2>
+            <p class="td-sub">Prix confirmé avant le départ</p>
+            <div class="td-badges">
+            <div class="td-badge"><span class="td-badge-dot"></span> Aucun supplément bagage</div>
+            <div class="td-badge"><span class="td-badge-dot"></span> Attente vol incluse</div>
+            <div class="td-badge"><span class="td-badge-dot"></span> Facture entreprise</div>
+            <div class="td-badge"><span class="td-badge-dot"></span> Crit'Air 0</div>
+            <div class="td-badge"><span class="td-badge-dot"></span> Wi-Fi à bord</div>
+            </div>
+
+            <div style="max-width:860px;margin:48px auto 0;">
+
+            <!-- AÉROPORTS -->
+            <div class="td-block">
+                <div class="td-section-label"><span>Aéroports</span></div>
+                <h3 style="font-family:'Syne',sans-serif;font-size:clamp(20px,3vw,26px);font-weight:800;margin-bottom:6px;">CDG, Orly, Le Bourget</h3>
+                <p class="td-section-desc"></p>
+                <table class="td-table">
+                <thead><tr><th>Aéroport</th><th>Tarif</th><th>Informations</th></tr></thead>
+                <tbody>
+                    <tr><td><div class="td-dest">Roissy-CDG</div><div class="td-subdest"></div></td><td><div class="td-price-cell">65 €</div></td><td style="color:#888;font-size:13px;">Tous les terminaux</td></tr>
+                    <tr><td><div class="td-dest">Orly</div><div class="td-subdest"></div></td><td><div class="td-price-cell">50 €</div></td><td style="color:#888;font-size:13px;">Tous les terminaux</td></tr>
+                    <tr><td><div class="td-dest">Le Bourget</div><div class="td-subdest"></div></td><td><div class="td-price-cell">55 €</div></td><td style="color:#888;font-size:13px;">Tous les terminaux</td></tr>
+                </tbody>
+                </table>
+                <div class="td-footnote"><span class="td-footnote-icon">●</span>Tarifs valables depuis Paris intra-muros (Du 1er au 20e arrondissement).</div>
+            </div>
+
+            <!-- GARES -->
+            <div class="td-block">
+                <div class="td-section-label"><span>Gares parisiennes</span></div>
+                <h3 style="font-family:'Syne',sans-serif;font-size:clamp(20px,3vw,26px);font-weight:800;margin-bottom:6px;">Les 6 grandes gares</h3>
+                <div class="td-card-grid" style="margin-top:24px;">
+                <div class="td-card"><div class="td-card-name">Gare du Nord</div><div class="td-card-sub">Eurostar, Thalys, RER B</div><div class="td-card-price">35 €</div></div>
+                <div class="td-card"><div class="td-card-name">Gare de Lyon</div><div class="td-card-sub">TGV Sud-Est, Méditerranée</div><div class="td-card-price">35 €</div></div>
+                <div class="td-card"><div class="td-card-name">Montparnasse</div><div class="td-card-sub">TGV Atlantique & Bretagne</div><div class="td-card-price">35 €</div></div>
+                <div class="td-card"><div class="td-card-name">Gare de l'Est</div><div class="td-card-sub">TGV Est, ICE, trains de nuit</div><div class="td-card-price">35 €</div></div>
+                <div class="td-card"><div class="td-card-name">Saint-Lazare</div><div class="td-card-sub">Normandie, banlieue Ouest</div><div class="td-card-price">35 €</div></div>
+                <div class="td-card"><div class="td-card-name">Gare d'Austerlitz</div><div class="td-card-sub">Intercités, grandes lignes</div><div class="td-card-price">35 €</div></div>
+                </div>
+            </div>
+                <div class="td-footnote" style="margin-bottom:0;margin-top:32px;">
+                <span class="td-footnote-icon">●</span>
+                Nos tarifs sont définis à la réservation en fonction du trafic et de l'heure de prise en charge.
+                </div>
+
+            <!-- LONGUE DISTANCE -->
+            <div class="td-block" style="margin-top:48px;">
+                <div class="td-section-label"><span>Longue distance</span></div>
+                <h3 style="font-family:'Syne',sans-serif;font-size:clamp(20px,3vw,26px);font-weight:800;margin-bottom:6px;">Versailles, Disneyland, & au-delà</h3>
+                <div class="td-footnote" style="margin-bottom:0;">
+                <span class="td-footnote-icon">●</span>
+                Pour toute destination hors Paris, le tarif est établi sur devis. Contactez-nous pour recevoir un prix fixe garanti en quelques minutes.
+                </div>
+            </div>
+
+            <!-- MISE À DISPOSITION -->
+            <div class="td-block">
+              <div class="td-section-label"><span>Mise à disposition</span></div>
+              <h3 style="font-family:'Syne',sans-serif;font-size:clamp(20px,3vw,26px);font-weight:800;margin-bottom:6px;">À l'heure, demi-journée, journée</h3>
+              <p class="td-section-desc">Votre chauffeur disponible exclusivement pour vous. Déplacements illimités sur la durée réservée.</p>
+              <div class="td-dispo-grid">
+                <div class="td-dispo-card"><div class="td-dispo-duration">1 heure</div><div class="td-dispo-price">65 €</div><div class="td-dispo-desc">Démarche unique, rendez-vous express</div></div>
+                <div class="td-dispo-card"><div class="td-dispo-duration">2 heures</div><div class="td-dispo-price">110 €</div><div class="td-dispo-desc">Shopping, réunion + déjeuner</div></div>
+                <div class="td-dispo-card"><div class="td-dispo-duration">3 heures</div><div class="td-dispo-price">155 €</div><div class="td-dispo-desc">Demi-matinée ou demi-après-midi</div></div>
+                <div class="td-dispo-card popular"><div class="td-popular-badge">Populaire</div><div class="td-dispo-duration">Demi-journée · 4h</div><div class="td-dispo-price">195 €</div><div class="td-dispo-desc">Tournée de réunions, visites</div></div>
+                <div class="td-dispo-card popular"><div class="td-popular-badge">Populaire</div><div class="td-dispo-duration">Journée · 8h</div><div class="td-dispo-price">370 €</div><div class="td-dispo-desc">Chauffeur dédié toute la journée</div></div>
+                <div class="td-dispo-card"><div class="td-dispo-duration">Soirée · 4h</div><div class="td-dispo-price">210 €</div><div class="td-dispo-desc">Opéra, gala, mariage, dîner de prestige</div></div>
+              </div>
+            </div>
+
+            <!-- PARIS & BANLIEUE -->
+            <div class="td-block">
+              <div class="td-section-label"><span>Paris & proche banlieue</span></div>
+              <h3 style="font-family:'Syne',sans-serif;font-size:clamp(20px,3vw,26px);font-weight:800;margin-bottom:6px;">Intra-muros & première couronne</h3>
+              <p class="td-section-desc">Tarifs de base. Minimum de prise en charge : 30 €.</p>
+              <div class="td-card-grid">
+                <div class="td-card"><div class="td-card-name">Paris intra-muros</div><div class="td-card-sub">1er – 20e arrondissement</div><div class="td-card-price">dès 30 €</div></div>
+                <div class="td-card"><div class="td-card-name">La Défense</div><div class="td-card-sub">CNIT, Tour First, Courbevoie</div><div class="td-card-price">dès 45 €</div></div>
+                <div class="td-card"><div class="td-card-name">Boulogne-Billancourt</div><div class="td-card-sub">Sièges sociaux, studios</div><div class="td-card-price">dès 40 €</div></div>
+                <div class="td-card"><div class="td-card-name">Neuilly-sur-Seine</div><div class="td-card-sub">Levallois, Av. Charles de Gaulle</div><div class="td-card-price">dès 40 €</div></div>
+                <div class="td-card"><div class="td-card-name">Vincennes / Saint-Mandé</div><div class="td-card-sub">Est parisien</div><div class="td-card-price">dès 40 €</div></div>
+                <div class="td-card"><div class="td-card-name">Issy-les-Moulineaux</div><div class="td-card-sub">Campus numérique, Eurosport</div><div class="td-card-price">dès 40 €</div></div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="section" id="contact">
+            <h2 class="section-title">Réserver / Contact</h2>
+            <div class="contact-wrapper">
+                <form class="contact-form" id="reservationForm">
+                    <input type="text" id="nom" placeholder="Votre nom" required>
+                    <input type="tel" id="telephone" placeholder="Votre téléphone" required>
+                    <input type="text" id="depart" placeholder="Départ">
+                    <input type="text" id="destination" placeholder="Destination">
+                    <div class="date-group">
+                        <div class="date-field">
+                            <label>Date</label>
+                            <input type="text" id="date_trajet_date" placeholder="Choisir une date" readonly>
+                        </div>
+                        <div class="date-field">
+                            <label>Heure</label>
+                            <input type="text" id="date_trajet_time" placeholder="Choisir l'heure" readonly>
+                        </div>
+                    </div>
+                    <textarea id="message" placeholder="Message ou informations complémentaires"></textarea>
+                    <button type="submit" class="btn-primary">Envoyer la demande</button>
+                    <p id="form-success" style="display:none;color:#5cb85c;text-align:center;font-weight:600;">✅ Demande envoyée ! Nous vous contactons rapidement.</p>
+                    <p id="form-error" style="display:none;color:#e57373;text-align:center;">❌ Une erreur est survenue. Veuillez réessayer.</p>
+                </form>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span>📞</span>
+                        <p><a href="tel:+33632637383">+33 6 32 63 73 83</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <span>✉️</span>
+                        <p><a href="mailto:greenvtcprive@gmail.com">greenvtcprive@gmail.com</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <span>🟢</span>
+                        <p>Disponible 7j/7 — 24h/24</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POURQUOI NOUS -->
+        <section class="section section-dark" id="pourquoi">
+            <h2 class="section-title">Pourquoi nous choisir ?</h2>
+            <div class="features">
+                <div class="feature">
+                    <span class="feature-icon">⏱</span>
+                    <h3>Ponctualité garantie</h3>
+                    <p>Nous suivons votre vol en temps réel et adaptons l'heure de prise en charge.</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">🚗</span>
+                    <h3>Véhicules haut de gamme</h3>
+                    <p>Flotte premium entretenue, climatisée et équipée pour votre confort.</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">👔</span>
+                    <h3>Chauffeurs professionnels</h3>
+                    <p>Expérimentés, discrets et courtois votre satisfaction est notre priorité.</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">💶</span>
+                    <h3>Tarifs transparents</h3>
+                    <p>Prix fixés à l'avance, sans surprise ni surcoût.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- BOUTON RETOUR EN HAUT -->
+        <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+<p class="footer-copy">&copy; 2026 Green VTC Privé — Tous droits réservés</p>
+        </footer>
+
+    <script>
+        /* ── FORMULAIRE DE RÉSERVATION ── */
+        document.getElementById('reservationForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button[type="submit"]');
+            btn.textContent = 'Envoi en cours...';
+            btn.disabled = true;
+
+            try {
+                const res = await fetch('http://localhost:3000/api/reservations', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        nom: document.getElementById('nom').value,
+                        telephone: document.getElementById('telephone').value,
+                        depart: document.getElementById('depart').value,
+                        destination: document.getElementById('destination').value,
+                        date_trajet: document.getElementById('date_trajet_date').value + ' ' + document.getElementById('date_trajet_time').value,
+                        message: document.getElementById('message').value
+                    })
+                });
+                if (res.ok) {
+                    e.target.reset();
+                    showToast();
+                } else {
+                    throw new Error();
+                }
+            } catch {
+                document.getElementById('form-error').style.display = 'block';
+            } finally {
+                btn.textContent = 'Envoyer la demande';
+                btn.disabled = false;
+            }
+        });
+
+        /* ── SIMULATEUR ── */
+        function calculerCourse() {
+            const distance = parseFloat(document.getElementById('distance').value);
+            const resultat = document.getElementById('resultat');
+            const prixFinal = document.getElementById('prix-final');
+
+            if (!distance || distance <= 0) {
+                alert('Veuillez entrer une distance valide.');
+                return;
+            }
+
+            const prixKm = 2;
+            const prixMinimum = 15;
+            let total = distance * prixKm;
+            if (total < prixMinimum) total = prixMinimum;
+
+            resultat.style.display = 'block';
+            animerPrix(total);
+        }
+
+        function setScrollMargin() {
+            const headerHeight = document.querySelector('.header').offsetHeight;
+            document.querySelectorAll('.section').forEach(section => {
+                section.style.scrollMarginTop = headerHeight + 'px';
+            });
+        }
+        setScrollMargin();
+        window.addEventListener('resize', setScrollMargin);
+
+        /* ── FLATPICKR ── */
+        const scriptFp = document.createElement('script');
+        scriptFp.src = 'https://cdn.jsdelivr.net/npm/flatpickr';
+        scriptFp.onload = () => {
+            const French = {
+                firstDayOfWeek: 1,
+                weekdays: { shorthand:['Dim','Lun','Mar','Mer','Jeu','Ven','Sam'], longhand:['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'] },
+                months: { shorthand:['Jan','Fév','Mar','Avr','Mai','Jun','Jul','Aoû','Sep','Oct','Nov','Déc'], longhand:['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'] }
+            };
+            flatpickr('#date_trajet_date', {
+                locale: French,
+                dateFormat: 'd/m/Y',
+                minDate: 'today',
+                disableMobile: true
+            });
+            flatpickr('#date_trajet_time', {
+                enableTime: true,
+                noCalendar: true,
+                dateFormat: 'H:i',
+                time_24hr: true,
+                minuteIncrement: 15,
+                disableMobile: true
+            });
+        };
+        document.head.appendChild(scriptFp);
+
+        /* ── TOAST ── */
+        function showToast() {
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 4000);
+        }
+
+        /* ── HEADER AU SCROLL + PROGRESS BAR + BACK TO TOP ── */
+        const header = document.querySelector('.header');
+        const progressBar = document.getElementById('progressBar');
+        const backToTop = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+            // Header
+            header.classList.toggle('scrolled', scrollY > 50);
+
+            // Barre de progression
+            progressBar.style.width = (scrollY / docHeight * 100) + '%';
+
+            // Bouton retour en haut
+            backToTop.classList.toggle('visible', scrollY > 400);
+        });
+
+        /* ── NAV ACTIVE AU SCROLL ── */
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link a');
+
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    const active = document.querySelector(`.nav-link a[href="#${entry.target.id}"]`);
+                    if (active) active.classList.add('active');
+                }
+            });
+        }, { threshold: 0.3 });
+
+        sections.forEach(section => sectionObserver.observe(section));
+
+        /* ── PARALLAX HERO ── */
+        const hero = document.querySelector('.hero');
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            hero.style.backgroundPositionY = `calc(50% + ${scrollY * 0.4}px)`;
+        });
+
+        /* ── ANIMATIONS AU SCROLL (Intersection Observer) ── */
+        const animElements = document.querySelectorAll(
+            '.card, .feature, .tarif-card, .flotte-wrapper, .simulateur-card, .contact-wrapper, .section-title'
+        );
+
+        animElements.forEach(el => el.classList.add('anim-hidden'));
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('anim-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        animElements.forEach(el => observer.observe(el));
+
+        /* ── COMPTEUR PRIX SIMULATEUR ── */
+        function animerPrix(valeur) {
+            const el = document.getElementById('prix-final');
+            let current = 0;
+            const step = valeur / 30;
+            const interval = setInterval(() => {
+                current += step;
+                if (current >= valeur) {
+                    current = valeur;
+                    clearInterval(interval);
+                }
+                el.textContent = current.toFixed(2) + ' €';
+            }, 20);
+        }
+    </script>
+    </body>
+</html>
